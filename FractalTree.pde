@@ -7,6 +7,7 @@ public void setup()
 {   
 	size(640, 480);
 	colorMode(HSB);
+	h=1;
 } 
 public void draw() 
 {   
@@ -21,7 +22,7 @@ public void draw()
 	    h-=1;
 	if(h==256)
 	    increasing=false;
-	  else if(h==-1){
+	  else if(h==1){
 	    increasing=true; 
 	  }
 } 
