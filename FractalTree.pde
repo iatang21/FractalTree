@@ -6,13 +6,12 @@ public boolean increasing;
 public void setup() 
 {   
 	size(640, 480);
-	colorMode(HSB);
-	h=1;
+	increasing=true;
 } 
 public void draw() 
 {   
-	background(h,255,130);   
-	stroke(255,0,255,150);   
+	background(h,0,255-h);   
+	stroke(255,255,255,150);   
 	line(320, 480, 320, 380);
 	branchAngle=mouseY/(480/.5);    
 	drawBranches(320, 380, 100, 3*Math.PI/2);
@@ -20,9 +19,9 @@ public void draw()
 	    h+=1;
 	  else
 	    h-=1;
-	if(h==256)
+	if(h==200)
 	    increasing=false;
-	  else if(h==1){
+	  else if(h==50){
 	    increasing=true; 
 	  }
 } 
